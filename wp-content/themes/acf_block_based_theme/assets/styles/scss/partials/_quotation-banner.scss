@@ -1,0 +1,25 @@
+.quotation-banner {
+
+    .inner {
+       
+        background-color: $brand-primary;
+        padding: 50px 30px;
+        border-radius: 30px;
+        align-items: center;
+        gap: 30px;
+        text-align: center;
+        display: flex;
+        flex-flow: column-reverse;
+        @include media-breakpoint-up(lg) {
+           display: flex;
+           padding: 50px 80px;
+           flex-flow: row;
+        }
+
+         h2 {
+            color: $fill-dark-v1;
+            margin-right: auto;
+            margin-bottom: 0;
+         }
+    }
+}

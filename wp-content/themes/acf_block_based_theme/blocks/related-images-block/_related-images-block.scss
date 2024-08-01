@@ -1,0 +1,73 @@
+.customized-images {
+    .shapes2{
+        img {
+            border-radius: 0px 99px 102px 101px;
+            aspect-ratio: 15 / 11;
+            object-fit: cover;
+            @include media-breakpoint-up(lg) {
+                border-radius: 180px 0px 185px 183px;
+                aspect-ratio: auto;
+
+            }
+        }
+    }
+    .image-wrapper {
+
+        &.shapes {
+            position: relative;
+            margin-bottom: 5%;
+         
+            img {
+              
+                border-radius: 180px 0 180px 175px;
+                object-fit: cover;
+                aspect-ratio: 15 / 11;
+               
+            
+               
+            }
+
+            &:before {
+                content: '';
+                width: 47px;
+                height: 108px;
+                border-radius: 10000px;
+                border-bottom-left-radius: 0;
+                display: none;
+                position: absolute;
+               
+                left : 0;
+                top: -30px;
+                background-color: $brand-primary;
+                @include media-breakpoint-up(lg) {
+                    left: calc(100% + 20px);
+                    display: block;
+                }
+                
+            }
+
+            &:after {
+                content: '';
+                width: 69px;
+                height: 158px;
+                border-radius: 10000px;
+                border-top-right-radius: 0;
+                display: none;
+                position: absolute;
+                right: 0;
+                top: calc(100% - 30px);
+                background-color: $brand-primary;
+                @include media-breakpoint-up(lg) {
+                    
+                    display: block;
+                }
+            }
+        }
+        
+        img {
+            width: 100%;
+           
+           
+        }
+    }
+}

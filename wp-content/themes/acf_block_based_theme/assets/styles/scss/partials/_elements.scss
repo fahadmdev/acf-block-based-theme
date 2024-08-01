@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    @include global-font;
+    background-color: $bg-primary;
+}
+
+a {
+    @include transition-standard;
+    color: $body-color;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: $link-hover;
+    }
+}
+
+p {
+    color: $body-color;
+}
+
+i,
+em {
+    font-style: italic;
+}
+
+b,
+strong {
+    font-weight: $fw-bold;
+}
+
+button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include heading;
+}
+
+h1 {
+    @include h1;
+}
+
+h2 {
+    @include h2;
+}
+
+h3 {
+    @include h3;
+}
+
+h4 {
+    @include h4;
+}
+
+h5 {
+    @include h5;
+}
+
+img {
+    max-width: 100%;
+}
+
+input, textarea, select {
+    box-shadow: none;
+    outline: none;
+}
+
+.padding {
+    padding: 40px 0;
+
+    @include media-breakpoint-up(lg) {
+        padding: 70px 0;
+    }
+}
+
+.cta-btn {
+    @include btn
+}
+
+.btn-inverted {
+    @include btn('inverted')
+}
+
+.btn-grey {
+    @include btn(grey)
+}
+
+.icon-btn {
+    @include btn(icon)
+}
+
+.gform_button {
+    transition: all .4s ease-out !important;
+    transition-timing-function: cubic-bezier(0.400,0.000,0.200,1.000) !important;
+    font-size: 16px !important;
+    min-height: 48px !important;
+    font-family: $font-family-base !important;
+    font-weight: $fw-medium !important;
+    color: $fill-dark-v1 !important;
+    text-transform: capitalize !important;
+    background-color: $brand-primary !important;
+    padding: 5px 20px !important;
+    cursor: pointer !important;
+    outline: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative;
+    border-radius: 10000px !important;
+    border: 1px solid $brand-primary !important;
+    box-shadow: none !important;
+
+    &:focus {
+        box-shadow: none !important;
+    }
+
+    &:hover {
+        background-color: $fill-dark-low-opacity !important;
+        color: $brand-primary !important;
+        border-color: $border-color-primary !important;
+    }
+}
+
+.cta-link {
+    color: $link-color;
+    font-weight: $fw-semi-bold;
+
+    &:hover {
+        color: $link-hover;
+    }
+}
+
+.fill-primary {
+    color: $brand-primary;
+}
+
+// swiper nav__btn starts
+.swiper__nav {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.nav__btn {
+    position: static;
+    margin: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $brand-primary;
+    border-radius: 50%;
+
+
+    @include media-breakpoint-up(md) {
+        width: 40px;
+        height: 40px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        width: 45px;
+        height: 45px;
+    }
+
+    &:after {
+        font-size: 20px !important;
+        font: var(--fa-font-solid);
+        color: #fff;
+
+        @include media-breakpoint-up(md) {
+            font-size: 30px !important;
+        }
+    }
+
+    &.swiper-button-prev {
+
+        &:after {
+            content: "\f104";
+        }
+    }
+
+    &.swiper-button-next {
+
+        &:after {
+            content: "\f105";
+        }
+    }
+}
+// swiper nav__btn ends
+
+// border animation starts
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.animate-border {
+    position: relative;
+    background: $bg-primary;
+    padding: 2px;
+    border-radius: 30px;
+
+    & > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: -0.125rem;
+        z-index: -1;
+        background: linear-gradient(var(--angle), 
+        rgba(255, 255, 255, 0.08),  rgba(255, 255, 255, 0.7));
+        animation: rotate 5s linear infinite;
+        border-radius: 30px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: $bg-primary;
+        border-radius: 30px;
+    }
+}
+
+@keyframes rotate {
+    0%     { --angle: 0deg; }
+    100%   { --angle: 360deg; }
+}
+// border animation ends

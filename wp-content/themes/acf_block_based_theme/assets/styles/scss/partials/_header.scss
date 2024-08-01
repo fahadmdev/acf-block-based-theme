@@ -1,0 +1,321 @@
+.site-header {
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: 0.3s all ease;
+  border-bottom: 1px solid transparent;
+  z-index: 9;
+
+  & + .header-padding {
+    height: 63px;
+    transition: 0.3s all ease;
+
+    @include media-breakpoint-up(lg) {
+      height: 96px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      height: 104px;
+    }
+  }
+
+  &.fixed-header {
+    background-color: $fill-dark-high-opacity;
+    border-bottom-color: $border-color-v2;
+    backdrop-filter: blur(8px);
+    padding: 15px 0;
+
+    & + .header-padding {
+      height: 82px;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 25px 0;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .inner {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .logo {
+    max-width: 110px;
+    display: flex;
+    width: 100%;
+
+    @include media-breakpoint-up(lg) {
+      max-width: 122px;
+    }
+
+    a {
+      display: inline-block;
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+  }
+
+  .navbar__wrap {
+    flex: 1;
+
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .menu {
+    @include media-breakpoint-up(lg) {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3px;
+      border-radius: 100000px;
+      border: 1px solid $border-color-primary;
+      background-color: $fill-dark-low-opacity;
+
+      a {
+        @include font-format(14px);
+        color: #fff;
+
+        @include media-breakpoint-up(xl) {
+          @include font-format(16px);
+        }
+
+        &:hover {
+          color: $brand-primary;
+        }
+      }
+
+      & > li {
+        text-transform: capitalize;
+
+        & > a {
+          padding: 6px 15px;
+          position: relative;
+          border-radius: 100000px;
+          display: block;
+
+          @include media-breakpoint-up(xl) {
+            padding: 10px 20px;
+          }
+
+          &:after {
+            @include transition-standard;
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 0%;
+            content: ".";
+            color: transparent;
+            background: $brand-primary;
+            height: 3px;
+          }
+
+          &:hover {
+            &:after {
+              width: 30px;
+            }
+          }
+        }
+      }
+
+      .current-menu-item {
+        a {
+          font-weight: $fw-semi-bold;
+          color: $fill-dark-v1;
+          background-color: $brand-primary;
+        }
+
+        & > a {
+          &:hover {
+            &:after {
+              content: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .searchbar {
+    margin-left: 16.5px;
+
+    .search__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      svg {
+        display: block;
+
+        path {
+          @include transition-standard;
+        }
+      }
+
+      &:hover {
+        svg {
+          path {
+            fill: $brand-secondary;
+          }
+        }
+      }
+    }
+  }
+
+  .searchbar__mob {
+    .form__item {
+      max-width: 279px;
+      width: 100%;
+      position: relative;
+
+      input {
+        @include font-format(16px, 24px);
+        padding: 8px 39px 8px 21px;
+        border-radius: 10000px;
+        width: 100%;
+        height: auto;
+        background-color: $fill-grey-light;
+        border: none;
+        outline: none;
+        box-shadow: none;
+
+        &::placeholder {
+          color: #404726;
+        }
+      }
+
+      .search__cta {
+        width: 18px;
+        height: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+.modal {
+  background: #191919;
+  .modal-dialog.modal-dialog-centered {
+    position: relative;
+
+    .modal-content {
+      background: #191919;
+      border: none;
+      position: static;
+      width: 100%;
+      margin: 0 auto;
+      @include media-breakpoint-up(sm) {
+        width: 80%;
+      }
+      .modal-header {
+        border: none;
+        .btn-close {
+          background-color: #fbff29;
+          border: none;
+          opacity: 1;
+          position: absolute;
+          right: 3%;
+          top: 3%;
+        }
+      }
+      .modal-body {
+        input[type="search"] {
+          background: transparent;
+          border: 1px solid #ffffff6b;
+          padding: 8px 19px;
+          width: 100%;
+          margin-bottom: 10px;
+          border-radius: 35px;
+          color: #fff;
+          @include media-breakpoint-up(md) {
+            width: 79%;
+            margin-bottom: 0;
+          }
+        }
+        input[type="submit"] {
+          width: 100%;
+          font-size: 17px;
+
+          @include media-breakpoint-up(md) {
+            width: 20%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal.show .modal-dialog {
+  max-width: 100%;
+}
+
+h1.modal-title {
+  margin-bottom: 11px;
+}
+.search-form-container {
+  form {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    width: 100%;
+    @include media-breakpoint-up(sm) {
+      flex-flow: row;
+    }
+  }
+}
+.search-button {
+  i {
+    color: #ffffff;
+    font-size: 21px;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 25px;
+    }
+  }
+
+  &:hover {
+    i {
+      color: #fbff29;
+      transform: scale(1.1);
+    }
+  }
+}
+
+.mobile-right-menu {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  gap: 10px;
+}
+nav#mobile__menu > .container {
+  margin-top: auto;
+  margin-bottom: auto;
+}

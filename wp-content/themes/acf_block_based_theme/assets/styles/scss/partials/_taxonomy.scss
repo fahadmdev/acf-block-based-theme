@@ -1,0 +1,134 @@
+.expertise-section {
+    margin-top: 7%;
+    ul {
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        li {
+            border-radius: 10px;
+            padding: 10px 15px;
+            color: #fbff29;
+        }
+    }
+    .animate-border::before {
+        border-radius: 10px;
+    }
+    .animate-border::after {
+        border-radius: 10px;
+        background: transparent;
+    }
+    
+}
+
+
+.pricing-section {
+    margin-top: 8%;
+}
+h1.page-title.stack-heading {
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.inner.text-center.search-page h1.stack-heading span {
+    color: #fbff29;
+    font-size: 50px;
+    @include media-breakpoint-up(sm) {
+        font-size: 165px;
+     
+    }
+    
+}
+ul.pricing-categories {
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    background: #131213;
+    padding: 30px 30px 30px 50px;
+    border-radius: 15px;
+    ul {
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0;
+        position: relative;
+        z-index: 0;
+        @include media-breakpoint-up(sm) {
+            justify-content: space-between;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            top: 0%;
+            right: 5%;
+            border-right: 1px solid #ffffff54;
+            opacity: 0;
+            @include media-breakpoint-up(md) {
+                opacity: 1;
+            }
+            
+        }
+        
+        li {
+           
+            flex: none;
+            margin-bottom: 15px;
+            position: relative;
+            @include media-breakpoint-up(sm) {
+                flex: 44%;
+            }
+           
+            &:after {
+                content: '\f00c';
+                position: absolute;
+                left: -21px;
+                font-weight: 800;
+                top: 0px;
+                font-family: 'Font Awesome 5 Free';
+                font-size: 15px;
+            }
+            
+        }
+    }
+
+    .row {
+        align-items: center;
+        position: relative;
+    }
+    
+}
+
+.pricing-hire {
+    text-align: center;
+    a{
+        @include media-breakpoint-down(md) {
+            font-size: 10px;
+        }
+        
+    }
+}
+
+.pricing-hire p span {
+    font-size: 25px;
+    font-weight: 600;
+    @include media-breakpoint-up(lg) {
+        font-size: 40px;
+    }
+    
+}
+.taxnomy-heading h1:first-letter {
+    color: #fbff29;
+}
+
+

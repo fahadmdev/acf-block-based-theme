@@ -1,0 +1,58 @@
+.home-hero {
+    position: relative;
+    
+    .inner {
+        min-height: calc(100vh - 102px);
+        padding: 50px 0;
+    }
+
+    .hero-description {
+        @include font-format(16px);
+        margin-bottom: 30px;
+
+        @include media-breakpoint-up(xl) {
+            @include font-format(18px);
+        }
+    }
+
+    .animate-border:has(.hero-form) {
+        width: 100%;
+
+        @include media-breakpoint-up(lg) {
+            max-width: 384px;
+            margin-left: auto;
+        }
+    }
+
+    .hero-form {
+        padding: 24px 15px;
+
+        @include media-breakpoint-up(md) {
+            padding: 24px 30px;
+        }
+        
+        .hero-form-title {
+            margin-bottom: 0;
+        }
+
+        .gform-theme--framework .gform_validation_errors {
+            display: none !important;
+        }
+
+        .gform_button {
+            width: 100% !important;
+        }
+    }
+    .hero-text{
+        .hero-cta-btns{
+            a{
+                @media (min-width: 768px) and (max-width: 1070px) {
+                    font-size: 15px;
+                }
+                
+            }
+        }
+
+    }
+}
+

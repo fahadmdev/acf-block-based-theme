@@ -1,0 +1,51 @@
+.inner-page-hero {
+    position: relative;
+    overflow: hidden;
+   
+    & > .container {
+        min-height: calc(50vh - 102px);
+       
+        display: flex;
+        position: relative;
+      
+        @include media-breakpoint-up(md) {
+            min-height: calc(100vh - 102px);
+           
+        }
+
+        .bg-image {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+            // @include media-breakpoint-up(md) {
+            //     width: auto;
+              
+            // }
+            
+
+        }
+    }
+
+    .inner {
+        margin: auto;
+        padding: 50px 0;
+        position: relative;
+        z-index: 1;
+    }
+
+    .description {
+        @include font-format(18px);
+        max-width: 900px;
+        width: 100%;
+        margin: 0 auto;
+    }
+   
+      
+    
+
+
+}

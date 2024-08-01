@@ -1,0 +1,59 @@
+.entry-content {
+
+    .post-head {
+        margin: 50px 0 80px;
+    }
+
+    .post-image {
+        margin-bottom: 50px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.social-share-icons {
+    display: flex;
+    justify-content: end;
+    gap: 4px;
+    margin: 10px 0;
+    align-items: center;
+    .mo-openid-app-icons {
+        margin: 0;
+    }
+    #share-to-icon {
+        i {
+            padding-top: 8px;
+            text-align: center;
+            color: #ffffff;
+            font-size: 21px ;
+            background-color: #434343;
+            height: 36px ;
+            width: 36px ;
+            border-radius : 50%
+        }
+    }
+     a {
+        cursor: pointer;
+    }
+}
+.toast-container{
+    .toast {
+        filter: drop-shadow(0px 0px 2px #ffffff42);
+        color: #ffffff42;
+        background: #0f0f0f;
+        font-size: 15px;
+        .toast-header {
+            background: transparent;
+            border-bottom: 1px solid #ffffff59;
+            color: #fff;
+            button {filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(221deg) brightness(110%) contrast(101%);}
+        }
+        .toast-body {
+            color: #fff;
+        }
+    }
+    
+}

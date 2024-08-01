@@ -1,0 +1,55 @@
+.pricing-plan {
+    
+    h2 {
+        margin-bottom: 25px;
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 40;
+        }
+    }
+
+    .pricing-text {
+        width: 100%;
+        margin-bottom: 20px;
+
+        @include media-breakpoint-up(xxl) {
+            max-width: 370px;
+        }
+        @include media-breakpoint-up(xl) {
+            margin-bottom: 0;
+        }
+        
+    }
+
+    .pricing-cards {
+
+        h4 {
+            color: $brand-primary;
+            text-transform: capitalize;
+        }
+
+        .single {
+            @include transition-standard;
+            padding: 25px;
+            border-radius: 16px;
+            background-color: $fill-dark-v2;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+
+            .description {
+                margin-bottom: 20px;
+            }
+        }
+
+        .single-footer {
+            padding-top: 20px;
+            border-top: 1px solid $border-color-v2;
+            
+            p {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}

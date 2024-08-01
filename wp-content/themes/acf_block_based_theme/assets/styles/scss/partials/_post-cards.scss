@@ -1,0 +1,50 @@
+.posts-listing-wrapper {
+
+    h2 {
+        margin-bottom: 50px;
+    }
+
+    .post {
+        @include transition-standard;
+        border-radius: 30px;
+        border: 2px solid $border-color-v2;
+        display: block;
+        padding: 12px;
+        height: 100%;
+
+        .post-thumbnail {
+            padding-bottom: 50%;
+            position: relative;
+            
+            img {
+                border-radius: 20px 20px 0 0;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        h4 {
+            @include transition-standard;
+        }
+
+        p {
+            margin-bottom: 0;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        &:hover {
+            transform: scale(1.02);
+
+            h4 {
+                color: $brand-primary;
+            }
+        }
+    }
+}

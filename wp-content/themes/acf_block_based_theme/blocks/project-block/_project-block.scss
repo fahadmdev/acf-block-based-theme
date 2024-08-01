@@ -1,0 +1,83 @@
+.projects {
+
+    h2 {
+        margin-bottom: 30px;
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 92px;
+        }
+    }
+
+    .project-cards {
+        display: flex;
+
+        .single {
+
+            @include media-breakpoint-up(xl) {
+                &:first-child {
+                    width: 66%;
+                }
+                &:nth-child(2) {
+                    width: 34%;
+                }
+            }
+        }
+
+        .card-content {
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+
+            &:hover {
+
+                .card-overlay {
+                    @include media-breakpoint-up(xl) {
+                        top: 0;
+                    }
+                }
+            }
+            span{
+                width: max-content;
+                font-size: 15px;
+                font-weight: 300;
+            }
+        }
+
+        .card-thumbnail {
+
+            img {
+                width: 100%;
+                height: 366px;
+                object-fit: cover;
+                object-position: 0;
+                border-radius: 15px;
+            }
+        }
+
+        .card-overlay {
+            @include transition-standard;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: auto;
+            background-color: rgba($color: #000000, $alpha: 0.8);
+            padding: 40px 30px 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            backdrop-filter: blur(8px);
+            border-radius: 15px;
+            p{
+                 display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;  
+                overflow: hidden;
+            }
+
+            @include media-breakpoint-up(xl) {
+                top: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

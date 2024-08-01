@@ -1,0 +1,68 @@
+.entry-content {
+    .post-head.text-center.service-detail {
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 50px;
+        margin-bottom: 80px;
+    }
+}
+
+.project-overview{
+    h2:first-child {
+        margin-bottom: 55px;  
+    }
+    .swiper-container{
+    overflow-x: hidden;
+    margin-bottom: 55px;
+    position: relative;
+    &:hover .swiper-button-next, &:hover .swiper-button-prev {
+        opacity: 1;
+        pointer-events: auto;
+
+    }
+    
+    }
+}
+.swiper-button-next {
+	background: #fbff29;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+	right: 10px;
+    opacity: 0;
+    transition: .3s ease-in-out;
+    pointer-events: none;
+    @include media-breakpoint-down(lg) {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    
+    &:after{
+        content: "\f061";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 600;
+        color: #000;
+        font-size: 16px;
+    }
+}
+.swiper-button-prev {
+	background: #fbff29;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+	left: 10px;
+    opacity: 0;
+    transition: .3s ease-in-out;
+    pointer-events: none;
+    @include media-breakpoint-down(lg) {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    &:after{
+        content: "\f060";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 600;
+        color: #000;
+        font-size: 16px;
+    }
+}

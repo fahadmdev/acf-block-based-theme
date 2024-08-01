@@ -9,7 +9,7 @@
 wp-content/*
 !wp-content/themes/
 wp-content/themes/*
-!wp-content/themes/acf_based_custom_theme
+!wp-content/themes/acf_block_based_theme
 
 # Ignore all plugins
 /wp-content/plugins/

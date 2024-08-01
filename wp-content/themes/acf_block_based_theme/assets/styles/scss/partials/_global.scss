@@ -1,0 +1,51 @@
+// Import font
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+// fonts
+$font-family-base: 'Poppins', sans-serif;
+$headings-font-family: "Oswald", sans-serif;
+
+// Colors
+$body-color: rgba(255, 255, 255, 0.70);
+$bg-primary: #191919;
+$brand-primary: #FBFF29;
+$brand-secondary: #0A142F;
+$btn-hover: darken($brand-primary, 10);
+$link-color: $brand-primary;
+$link-hover: darken($brand-primary, 10);
+$fill-grey-dark: #363642;
+$fill-grey-dark-v2: #30303B;
+$fill-grey-light: #D3D7E3;
+$fill-grey-light-v2: #D9D9D9;
+$fill-grey-v1: #566B89;
+$fill-grey-v2: #A6A6A6;
+$fill-purple: #3C3C62;
+$fill-black-faded: #111111;
+$fill-white-v1: #f4f4f4;
+$fill-blue-v1: #566B89;
+
+$fill-dark-v1: #222426;
+$fill-dark-v2: #131213;
+$fill-dark-low-opacity: rgba(6, 5, 8, 0.07);
+$fill-dark-high-opacity: rgba(25, 25, 25, 0.90);
+$fill-primary-extra-light: rgba(249, 246, 224, 0.50);
+$fill-primary-extra-light-v1: rgba(249, 246, 224, 0.08);
+$fill-primary-extra-light-v2: rgba(251, 255, 41, 0.30);
+$fill-light-v1: rgba(255, 255, 255, 0.28);
+$fill-light-v2: rgba(255, 255, 255, 0.10);
+$border-color-primary: $fill-primary-extra-light-v2;
+$border-color-v1: $fill-light-v1;
+$border-color-v2:$fill-light-v2;
+
+$bg-gradient-v1: linear-gradient(109deg, rgba(255, 255, 255, 0.15) 1.57%, rgba(255, 255, 255, 0.06) 100%);
+
+
+
+/* Font Weights */
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+$fw-extra-bold: 800;
+$fw-black: 900;

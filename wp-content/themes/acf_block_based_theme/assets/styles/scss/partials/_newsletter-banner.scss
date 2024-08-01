@@ -1,0 +1,47 @@
+.newsletter-banner {
+    
+    h2 {
+        color: $fill-dark-v1;
+    }
+    
+    .inner {
+        background-color: $brand-primary;
+        border-radius: 30px;
+        padding: 45px 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include media-breakpoint-up(lg) {
+            flex-direction: row;
+            padding: 72px 55px;
+        }
+    }
+
+    .banner-text {
+        width: 100%;
+        color: $fill-dark-v1;
+
+        @include media-breakpoint-up(lg) {
+            max-width: 715px;
+            width: 77%;
+        }
+
+        .description {
+            @include font-format(16px);
+
+            @include media-breakpoint-up(lg) {
+                @include font-format(18px);
+            }
+        }
+    }
+
+    .banner-cta {
+        margin-top: 20px;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 0;
+            align-self: flex-end;
+        }
+    }
+}

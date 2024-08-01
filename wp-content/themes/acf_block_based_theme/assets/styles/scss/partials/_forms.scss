@@ -1,0 +1,77 @@
+.gform-theme--foundation .gform_fields {
+  row-gap: 25px !important;
+}
+
+.gform-theme--framework .gform-field-label {
+  color: #fff !important;
+  font-size: 16px !important;
+  font-weight: $fw-regular !important;
+}
+
+.gform-theme--framework .gform-field-label .gfield_required_text {
+  display: none;
+}
+
+.gform-theme--framework .gfield textarea,
+.gform-theme--framework .ginput_container input {
+  font-size: 14px !important;
+  background: $fill-primary-extra-light-v1 !important;
+  box-shadow: none !important;
+  border-color: $border-color-v1 !important;
+  color: #fff !important;
+  min-height: 42px !important;
+  border-radius: 15px !important;
+  resize: none;
+}
+.gform-theme--framework .gfield textarea::placeholder,
+.gform-theme--framework .ginput_container input::placeholder {
+  color: $fill-primary-extra-light;
+}
+.gform-theme--framework .gfield textarea:focus,
+.gform-theme--framework .ginput_container input:focus {
+  border-color: $border-color-primary !important;
+}
+
+.gform-theme--framework .gfield--type-choice .gfield_checkbox {
+  flex-direction: row !important;
+  flex-wrap: wrap;
+}
+.gfield--type-checkbox .show-all-container {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.gchoice {
+  position: relative;
+}
+.gchoice .gfield-choice-input {
+  position: absolute;
+  height: 0;
+  width: 0;
+  border: none;
+  opacity: 0 !important;
+  pointer-events: none;
+}
+.gchoice .gform-field-label {
+  @include transition-standard;
+  margin-left: 0 !important;
+  color: $fill-primary-extra-light !important;
+  font-size: 14px !important;
+  cursor: pointer;
+  background-color: $fill-primary-extra-light-v1 !important;
+  padding: 8px 30px;
+  border-radius: 10000px;
+  font-weight: $fw-medium !important;
+}
+.gchoice .gfield-choice-input:checked + .gform-field-label {
+  background-color: $brand-primary !important;
+  color: $fill-dark-v1 !important;
+}
+.ginput_container.ginput_container_email input {
+  @include media-breakpoint-down(md) {
+    inline-size: 100% !important;
+  }
+}
+.gform-theme--foundation .gfield textarea {
+  word-break: break-word;
+}

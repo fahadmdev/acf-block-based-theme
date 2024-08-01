@@ -1,0 +1,19 @@
+.employment-form-wrapper {
+
+    .inner {
+
+        h2 {
+            margin-bottom: 50px;
+        }
+
+        .employment-form {
+            padding: 30px 25px;
+            background-color: $fill-dark-v2;
+            border-radius: 26px;
+            @include media-breakpoint-up(md) {
+                padding: 50px ;
+            }
+            
+        }
+    }
+}

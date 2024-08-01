@@ -1,0 +1,17 @@
+.marqee-banner {
+    background-color: $brand-primary;
+
+    .inner {
+        padding: 20px;
+
+        & > p {
+            @include font-format(17px, 1.5);
+            margin-bottom: 0;
+            color: $fill-dark-v1;
+            font-weight: $fw-semi-bold;
+            @include media-breakpoint-up(lg) {
+                @include font-format(23px, 1.5);
+            }
+        }
+    }
+}

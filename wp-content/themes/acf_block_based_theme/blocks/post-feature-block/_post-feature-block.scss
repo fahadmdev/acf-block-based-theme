@@ -1,0 +1,31 @@
+.single-featured-blog {
+
+    .post-card {
+        display: block;
+
+        h3 {
+            @include transition-standard;
+        }
+
+        &:hover {
+
+            h3 {
+                color: $brand-primary;
+            }
+        }
+    }
+
+    .post-image {
+        
+        img {
+            width: 100%;
+            @include media-breakpoint-down(md) {
+                object-fit: cover;
+                object-position: left;
+                border-top-right-radius: 25px;
+            }
+            
+           
+        }
+    }
+}
